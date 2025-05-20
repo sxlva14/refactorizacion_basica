@@ -2,7 +2,8 @@ public class Main {
     
     // 1. Extract Method (Extraer método)
 
-    // Antes:
+    /*
+    Antes:
     public static void mostrarPerfilUsuario() {
         String nombreUsuario = "Salva";
         String correoUsuario = "2898560@alu.murciaeduca.es";
@@ -12,9 +13,30 @@ public class Main {
         System.out.println("Correo electrónico del usuario: " + correoUsuario);
         System.out.println("Edad del usuario: " + edadUsuario);
     }
+    */
 
     // Después: 
+    private static String mostrarNombre() {
+        return "Salva";
+    }
 
+    private static String mostrarCorreo() {
+        return "2898560@alu.murciaeduca.es";
+    }
+
+    private static int mostrarEdad() {
+        return 18;
+    }
+
+    public static void mostrarPerfilUsuario() {
+        System.out.println(
+            "--- Perfil del Usuario ---" +
+            "\nNombre del usuario: " + mostrarNombre() + 
+            "\nCorreo del usuario: " + mostrarCorreo() +
+            "\nEdad del usuario: " + mostrarEdad() + 
+            "\n--------------------------"
+            );
+    }
 
 
     // 2. Rename Variable (Renombrar variable)
@@ -83,7 +105,7 @@ public class Main {
 
     // Después:
 
-    
+
 
     public static void main(String[] args) {
         mostrarPerfilUsuario();
