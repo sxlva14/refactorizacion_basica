@@ -131,16 +131,22 @@ public class Main {
 
     // 5. Inline Variable
 
-    // Antes:
+    /*
+    Antes:
     public static double precioMasIVA() {
         double precio = 19.95;
 
         double totalConIva = precio * 1.21;
         return totalConIva;
     }
+    */ 
 
     // Después:
+    public static double precioMasIVA() {
+        double precio = 19.95;
 
+        return precio * 1.21;
+    }
 
 
     public static void main(String[] args) {
