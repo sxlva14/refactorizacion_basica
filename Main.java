@@ -82,7 +82,7 @@ public class Main {
         double nota = 4.9;
 
         double minAprobado = 5.0;
-        if (nota > minAprobado) {
+        if (nota >= minAprobado) {
             System.out.println("Has aprobado!");
         } else {
             System.out.println("Has suspendido!");
@@ -115,7 +115,7 @@ public class Main {
         int edad = 18;
         double alcoholEnSangre = 0.56;
         int personasDentro = 482;
-        int aforoMaximo = 700;
+        final int aforoMaximo = 700;
 
         boolean esMayorEdad = edad >= 18;
         boolean alcoholPermitido = alcoholEnSangre < 0.5;
@@ -144,8 +144,9 @@ public class Main {
     // Después:
     public static double precioMasIVA() {
         double precio = 19.95;
+        final double IVA = 0.21;
 
-        return precio * 1.21;
+        return precio * (1 + IVA);
     }
 
 
