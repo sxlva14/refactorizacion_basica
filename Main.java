@@ -64,7 +64,8 @@ public class Main {
 
     // 3. Replace Magic Number
 
-    // Antes:
+    /*
+    Antes:
     public static void comprobarNota() {
         double nota = 4.9;
 
@@ -74,9 +75,19 @@ public class Main {
             System.out.println("Has suspendido el curso");
         }
     }
+    */ 
 
     // Después:
+    public static void comprobarNota() {
+        double nota = 4.9;
 
+        double minAprobado = 5.0;
+        if (nota > minAprobado) {
+            System.out.println("Has aprobado!");
+        } else {
+            System.out.println("Has suspendido!");
+        }
+    }
 
 
     // 4. Introduce Explaining Variable
