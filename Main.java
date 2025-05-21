@@ -92,7 +92,8 @@ public class Main {
 
     // 4. Introduce Explaining Variable
 
-    // Antes:
+    /*
+    Antes:
     public static void entradaDiscoteca() {
         int edad = 18;
         double alcoholEnSangre = 0.56;
@@ -107,9 +108,25 @@ public class Main {
             System.out.println("Entrada rechazada");
         }
     }
+    */ 
 
     // Después:
+    public static void entradaDiscoteca() {
+        int edad = 18;
+        double alcoholEnSangre = 0.56;
+        int personasDentro = 482;
+        int aforoMaximo = 700;
 
+        boolean esMayorEdad = edad >= 18;
+        boolean alcoholPermitido = alcoholEnSangre < 0.5;
+        boolean entradaPermitida = personasDentro < aforoMaximo;
+        if (esMayorEdad && alcoholPermitido && entradaPermitida) {
+            System.out.println("Entrada valida!");
+            personasDentro++;
+        } else {
+            System.out.println("Entrada rechazada");
+        }
+    }
 
 
     // 5. Inline Variable
