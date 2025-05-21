@@ -41,7 +41,8 @@ public class Main {
 
     // 2. Rename Variable (Renombrar variable)
 
-    // Antes:
+    /* 
+    Antes:
     public static double areaTriangulo() {
         double b = 5.0;
         double h = 3.2;
@@ -49,9 +50,16 @@ public class Main {
         double a = (b * h) / 2;
         return a;
     }
+    */ 
 
     // Después:
+    public static double areaTriangulo() {
+        double base = 5.0;
+        double altura = 3.2;
 
+        double area = (base * altura) / 2;
+        return area;
+    }
 
 
     // 3. Replace Magic Number
