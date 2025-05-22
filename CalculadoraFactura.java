@@ -21,8 +21,11 @@ public class CalculadoraFactura {
         double impuestoFijo = 21.0; // porcentaje de impuesto fijo
         int cien = 100;
 
-        double precioDescontado = precioBase - (precioBase * descuento / cien);
-        double total = precioDescontado + (precioDescontado * impuestoFijo / cien);
+        double descontado = precioBase * descuento / cien;
+        double precioDescontado = precioBase - descontado; 
+
+        double impuestoAplicado = precioDescontado * impuestoFijo / cien;
+        double total = precioDescontado + impuestoAplicado;
 
         mostrarPrecioBase(precioBase);
         mostrarDescuento(descuento);
