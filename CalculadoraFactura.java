@@ -19,9 +19,10 @@ public class CalculadoraFactura {
 
     public static void calcular(double precioBase, double descuento) {
         double impuestoFijo = 21.0; // porcentaje de impuesto fijo
+        int cien = 100;
 
-        double precioDescontado = precioBase - (precioBase * descuento / 100);
-        double total = precioDescontado + (precioDescontado * impuestoFijo / 100);
+        double precioDescontado = precioBase - (precioBase * descuento / cien);
+        double total = precioDescontado + (precioDescontado * impuestoFijo / cien);
 
         mostrarPrecioBase(precioBase);
         mostrarDescuento(descuento);
