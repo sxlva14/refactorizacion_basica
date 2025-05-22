@@ -52,4 +52,8 @@ public class CalculadoraFactura {
         System.out.println(mostrarImpuestoAplicado(impuestoFijo));
         System.out.println(totalAPagar(total));
     }
+
+    public static void main(String[] args) {
+        calcular(100, 5);
+    }
 }
