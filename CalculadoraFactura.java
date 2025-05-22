@@ -27,25 +27,29 @@ public class CalculadoraFactura {
         double impuestoAplicado = precioDescontado * impuestoFijo / cien;
         double total = precioDescontado + impuestoAplicado;
 
-        mostrarPrecioBase(precioBase);
-        mostrarDescuento(descuento);
-        mostrarImpuestoAplicado(impuestoFijo);
-        totalAPagar(total);
+        mostrarTodaInformacion(precioBase, descuento, impuestoFijo, total);
     }
 
-    public static void mostrarPrecioBase(double precioBase) {
-        System.out.println("El precio base es: " + precioBase);
+    public static String mostrarPrecioBase(double precioBase) {
+        return "El precio base es: " + precioBase;
     }
 
-    public static void mostrarDescuento(double descuento) {
-        System.out.println("Descuento aplicado: " + descuento + "%");
+    public static String mostrarDescuento(double descuento) {
+        return "Descuento aplicado: " + descuento + "%";
     }
 
-    public static void mostrarImpuestoAplicado(double impuestoFijo) {
-        System.out.println("Impuesto aplicado: " + impuestoFijo + "%");
+    public static String mostrarImpuestoAplicado(double impuestoFijo) {
+        return "Impuesto aplicado: " + impuestoFijo + "%";
     }
 
-    public static void totalAPagar(double total) {
-        System.out.println("El total a pagar es: " + total);
+    public static String totalAPagar(double total) {
+        return "El total a pagar es: " + total;
+    }
+
+    public static void mostrarTodaInformacion(double precioBase, double descuento, double impuestoFijo, double total) {
+        System.out.println(mostrarPrecioBase(precioBase));
+        System.out.println(mostrarDescuento(descuento));
+        System.out.println(mostrarImpuestoAplicado(impuestoFijo));
+        System.out.println(totalAPagar(total));
     }
 }
